@@ -6,7 +6,7 @@ date: '2024-08-18'
 description: "Peter Mac Consulting Services"
 enableComments: false
 draft: false
-image: consulting/consulting.jpg
+image: consulting/consulting.webp
 ---
 
 ### Helping Empower Your Technology Vision

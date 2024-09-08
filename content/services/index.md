@@ -6,7 +6,7 @@ date: '2024-08-18'
 description: "Services provided by Peter Mac"
 enableComments: false
 draft: false
-image: services/services.jpg
+image: services/services.webp
 ---
 
 ### Current State Analysis

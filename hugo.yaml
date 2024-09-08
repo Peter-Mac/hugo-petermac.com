@@ -59,9 +59,12 @@ params:
     - name: Contact
       pageRef: /contact
       weight: 40
+    - name: Cv
+      pageRef: /cv
+      weight: 50
     - name: Search
       pageRef: /search
-      weight: 50
+      weight: 60
 
   og:
     site_name: "Peter Mac - IT Architect &amp; Consultant | I'm a consulting technology 
