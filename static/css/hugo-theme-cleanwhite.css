@@ -472,7 +472,7 @@ pre code{
 }
 .post-preview>a:hover,.post-preview>a:focus{
     text-decoration:none;
-    color:#0085a1
+    color:#d83b0c;
 }
 .post-preview>a>.post-title{
     font-size:21px;
@@ -496,7 +496,7 @@ pre code{
 }
 
 .post-preview>.post-meta>a:hover,.post-preview>.post-meta>a:focus{
-    color:#0085a1;
+    color:#d83b0c;
     text-decoration:none
 }
 @media only screen and (min-width:768px){
@@ -515,10 +515,10 @@ pre code{
 .post-content-preview{
     font-size:13px;
     font-style:italic;
-    color:#a3a3a3
+    color:#3f3f3f
 }
 .post-content-preview:hover{
-    color:#0085a1
+    color:#d83b0c
 }
 @media only screen and (min-width:768px){
     .post-content-preview{
