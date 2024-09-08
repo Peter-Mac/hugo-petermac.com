@@ -1,0 +1,95 @@
+.DS_Store
+public
+resources/_gen/assets/css
+resources/_gen/assets/scss
+# resources/_gen/assets
+resources/_gen/getresource
+# --- the above line is so tweets/toots won't be "noisy"
+# resources/json
+# resources/_gen/images/images/social-OG-w-BW-logo_1024x512*.*
+hugo_stats.json
+node_modules
+.env
+*.env
+.env.*
+# _cache
+# data
+.vscode
+.npmrc
+.netlify
+.firebase
+.nova
+.unlighthouse
+
+csp.txt
+cache-and-headers.js
+nonce-worker.js
+cache-nonce*.js
+
+# assets/css
+assets/lcss
+assets/cssfor
+themes/sass/assets/css
+themes/newcss/assets/css
+themes/twjit/assets/css/index.css
+themes/twjit-hero/assets/css/index.css
+themes/twjit-thoreau/assets/css/index.css
+themes/npm-sass/assets/css
+themes/npm-sass/assets/css/*.css
+themes/lcss/assets/css
+
+.hugo_build.lock
+
+# start.sh
+startdebug.sh
+startpf.sh
+logstart.sh
+# build*.sh
+# testbuild*.sh
+# start*.sh
+# push*.sh
+# serve*.sh
+deploy.sh
+myip.txt
+wm*.sh
+git*.sh
+gitoutput.txt
+move*.sh
+# install*.sh
+
+hugo_site-log.txt
+
+tweetcurl*.json
+toot*.json
+
+.vercel
+
+.formergha
+.former_root-level
+
+gha.txt
+gha*.json
+
+static/_pagefind
+static/pagefind
+
+bin/hugo
+
+_z
+
+# Re possible config files
+# per Discord discussions
+# in 2023-05
+cfpages.json
+cfpages.jsonc
+cfpages.yaml
+cfpages.toml
+cfpages.yml
+
+.wrangler
+
+pnpm-help*.*
+lcss-help-*.txt
+serve-help*.*
+
+getbsky*.j*

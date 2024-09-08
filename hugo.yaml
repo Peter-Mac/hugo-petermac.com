@@ -1,0 +1,79 @@
+baseURL: 'https://www.petermac.com/'
+languageCode: 'en-au'
+title: Peter Mac
+theme: petermac-theme
+preserveTaxonomyNames: true
+pagination.pagerSize: 5
+hasCJKLanguage: false
+enableRobotsTXT: true
+timeZone: 'Australia/Melbourne'
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+
+permalinks:
+  posts: /:year/:month/:slug/
+  page: /:slug/
+
+services:
+  googleAnalytics:
+    ID: 'G-7Y8CSL5DSV'
+
+# Broad set of custom parmeters go below here
+
+params:
+  author: Peter Mac
+  authorEmail: peter@petermac.com
+  header_image: img/uluru.webp
+  SEOTitle: Peter Mac | Technology Architect
+  description: A highly skilled consulting technology architect
+  keyword: >-
+    Technology architect, freelance, systems design, custom software, web
+    services, consulting
+  slogan: Consulting Technology Architect
+  upstreamAttribution: false
+  omit_categories: true
+  featured_tags: false
+  sidebar_about_description: 'Technology Architect, Home Automation enthusiast, Motorcyclist'
+  sidebar_avatar: img/peter-mac.png
+  image_404: img/tram.webp
+  email_obfuscation: local
+
+  menus:
+    main:
+    - name: Consulting
+      pageRef: /consulting
+      weight: 10
+    - name: Services
+      pageRef: /services
+      weight: 20
+    - name: About
+      pageRef: /about
+      weight: 30
+    - name: Contact
+      pageRef: /contact
+      weight: 40
+    - name: Search
+      pageRef: /search
+      weight: 50
+
+  og:
+    site_name: "Peter Mac - IT Architect &amp; Consultant | I'm a consulting technology 
+      architect based in Melbourne, Australia. I work for both local and international 
+      clients providing a broad range of technology consulting advice."
+    title: "Peter Mac is an experienced consulting technology architect based in Australia"
+    description: "About Peter Mac - An highly skilled technology architect with experience
+      in strategic IT planning, design and integration with business goals
+      and outcome focus"
+
+  social:
+    rss: true
+    linkedin: 'https://www.linkedin.com/in/peter-mac-44135121/'
+    github: 'https://github.com/Peter-Mac'
+
