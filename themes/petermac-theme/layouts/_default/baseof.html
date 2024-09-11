@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+<head>
     {{ if .Params.noindex }}
     <meta name="robots" content="noindex">
     {{ end }}
 
-{{ partial "head.html" . }}
+    {{ partial "head.html" . }}
+
+    {{ if .Site.Config.Services.GoogleAnalytics.ID }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+    
+</head>
+
 {{ partial "nav.html" . }}
 <!-- Page Header -->
 {{ block "header" .}}
@@ -23,6 +31,8 @@
 </header>
 {{ end }}
 
+<body data-pagefind-body>
+    
 {{ block "main" . }}
 
 {{ end }}

@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Configure git to use a remote repository"
 date: 2015-02-10
 categories: 

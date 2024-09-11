@@ -1,10 +1,11 @@
 ---
-type: post
 title: "Installing MySQL gem on OSX 10.6"
+description: "test description"
+author: Peter Mac
 date: 2013-06-01
 categories: 
   - "databases"
-  - "osx"
+  - "osx"   
   - "ruby-on-rails"
 ---
 

@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Home Automation with Nue hub"
 date: 2019-10-02
 tags: 

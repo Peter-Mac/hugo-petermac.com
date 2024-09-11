@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "TMUX Operations"
 date: 2019-12-15
 tags: 

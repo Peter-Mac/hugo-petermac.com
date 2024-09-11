@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "The Martian Principles for Successful Enterprise Systems"
 date: 2015-04-19
 categories: 

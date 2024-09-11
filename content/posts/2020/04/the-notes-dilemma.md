@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "The Notes Dilemma"
 date: 2020-04-11
 tags:

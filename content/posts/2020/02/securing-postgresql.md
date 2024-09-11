@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Securing PostgreSQL"
 date: 2020-02-16
 tags: 

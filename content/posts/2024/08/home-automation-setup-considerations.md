@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: Home Automation Setup Thoughts
 subtitle: The journey to Home Automation setup
 date: 2024-08-05

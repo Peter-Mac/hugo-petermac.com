@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Using magic_quotes_gpc or addslashes()"
 date: 2015-06-01
 tags: 

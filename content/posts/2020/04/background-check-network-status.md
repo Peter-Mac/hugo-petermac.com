@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Background Check Network Status"
 date: 2020-04-24
 tags:

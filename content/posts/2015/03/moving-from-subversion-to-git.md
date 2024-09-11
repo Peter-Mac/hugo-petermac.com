@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Moving from Subversion to Git"
 date: 2015-03-18
 categories: 

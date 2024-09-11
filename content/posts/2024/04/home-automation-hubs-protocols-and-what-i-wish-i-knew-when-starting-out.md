@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Home Automation, Hubs, Protocols, and What I Wish I Knew When Starting Out"
 subtitle: Home Automation simplification
 date: 2024-04-11

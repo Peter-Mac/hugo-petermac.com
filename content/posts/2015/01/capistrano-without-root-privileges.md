@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Capistrano Without Root Privileges"
 date: 2015-01-29
 categories: 

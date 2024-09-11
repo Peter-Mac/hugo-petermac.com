@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "102 Linux Tips"
 date: 2020-04-04
 tags: 

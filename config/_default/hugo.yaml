@@ -1,0 +1,86 @@
+baseURL: 'https://www.petermac.com'
+title: 'Peter Mac'
+languageCode: 'en-au'
+pagination.pagerSize: 5
+hasCJKLanguage: false
+enableRobotsTXT: true
+timeZone: 'Australia/Melbourne'
+rssLimit: 10 # default is -1 (unlimited); setting of '10' conforms to Eleventy repo's handling
+summaryLength: 30 # words --- if you use summaries **without** the `--more--` workaround
+theme: petermac-theme
+
+#disableKinds:
+#  - taxonomy
+#  - term
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+
+permalinks:
+  posts: posts/:year/:month/:slug/
+  page: /:slug/
+
+services:
+  googleAnalytics:
+    ID: 'G-7Y8CSL5DSV'
+
+# Broad set of custom parmeters go below here
+
+params:
+  Title: Peter Mac
+  Author: Peter Mac
+  AuthorEmail: peter@petermac.com
+  Domain: petermac.com
+  header_image: img/uluru.webp
+  SEOTitle: Peter Mac | Technology Architect
+  Description: A highly skilled consulting technology architect
+  keyword: >-
+    Technology architect, freelance, systems design, custom software, web
+    services, consulting
+  Slogan: Consulting Technology Architect
+  upstreamAttribution: false
+  omit_categories: true
+  featured_tags: false
+  sidebar_about_description: 'Technology Architect, Home Automation enthusiast, Motorcyclist'
+  sidebar_avatar: img/peter-mac.png
+  image_404: img/tram.webp
+  email_obfuscation: local
+
+  menus:
+    main:
+    - name: Consulting
+      pageRef: /consulting
+      weight: 10
+    - name: Services
+      pageRef: /services
+      weight: 20
+    - name: About
+      pageRef: /about
+      weight: 30
+    - name: Contact
+      pageRef: /contact
+      weight: 40
+    - name: Cv
+      pageRef: /cv
+      weight: 50
+
+  og:
+    site_name: "Peter Mac - IT Architect &amp; Consultant | I'm a consulting technology 
+      architect based in Melbourne, Australia. I work for both local and international 
+      clients providing a broad range of technology consulting advice."
+    title: "Peter Mac is an experienced consulting technology architect based in Australia"
+    description: "About Peter Mac - An highly skilled technology architect with experience
+      in strategic IT planning, design and integration with business goals
+      and outcome focus"
+
+  social:
+    rss: true
+    linkedin: 'https://www.linkedin.com/in/peter-mac-44135121/'
+    github: 'https://github.com/Peter-Mac'
+

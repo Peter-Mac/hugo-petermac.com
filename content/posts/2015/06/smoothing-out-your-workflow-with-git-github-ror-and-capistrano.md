@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Smoothing out your workflow with git, github, RoR and Capistrano"
 date: 2015-06-01
 categories: 

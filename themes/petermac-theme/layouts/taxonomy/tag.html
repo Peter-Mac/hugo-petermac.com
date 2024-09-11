@@ -1,3 +1,16 @@
 {{ define "main" }}
-  {{ partial "category.html" . }}
+<section class="container list">
+  <header>
+    <h3 class="title">
+      
+        {{- if eq .Kind "term" -}}
+          {{- i18n .Data.Plural 1 | title -}}
+          {{- print "Tags filtered by: " -}}
+        {{- end -}}
+        {{- i18n (lower .Title) | default .Title | title -}}
+      
+    </h3>
+  </header>
+
+{{ partial "post_list.html" .}}
 {{ end }}

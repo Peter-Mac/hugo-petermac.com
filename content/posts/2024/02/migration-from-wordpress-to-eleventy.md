@@ -1,5 +1,5 @@
 ---
-type:  post 
+layout: post
 title: Migrating a wordpress site to a static site 
 subtitle:  "Bye bye wordpress bloat"
 author: Peter Mac

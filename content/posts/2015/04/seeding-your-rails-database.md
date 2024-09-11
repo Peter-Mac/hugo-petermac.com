@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Seeding your rails database"
 date: 2015-04-13
 categories: 

@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Renewing letsencrypt certs for Apache"
 date: 2020-01-16
 tags: 
@@ -10,7 +10,11 @@ tags:
 
 # To renew as standalone and restart apache
 
+```
 > sudo service apache2 stop sudo certbot certonly --standalone
+```
+
+Results in the following output:
 
 ```
 Saving debug log to /home/peter/appdir/~/.certbot/logs/letsencrypt.log
@@ -39,8 +43,6 @@ again. To non-interactively renew *all* of your certificates, run
 
 Donating to ISRG / Let's Encrypt: https://letsencrypt.org/donate
 Donating to EFF: https://eff.org/donate-le
-
-
 ```
 
 Then update your /etc/apache2/sites-available/vhosts-ssl.conf

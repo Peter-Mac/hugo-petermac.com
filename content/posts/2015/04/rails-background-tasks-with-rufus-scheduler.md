@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Rails background tasks with Rufus Scheduler"
 date: 2015-04-09
 categories: 

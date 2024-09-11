@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: Synology Hyperbackup Operation
 subtitle: Ins and outs of hyperbackup
 date: 2023-12-12
@@ -13,10 +13,13 @@ How do I know what was backed up on hyperbackup? I have an hbk file but I cannot
 ```
 https://kb.synology.com/en-us/DSM/tutorial/How_to_restore_settings_apps_files_permissions_by_Hyper_Backup
 ```
+
+Restoring files from previously backups.
 ```
 https://kb.synology.com/en-us/DSM/help/HyperBackup/restore?version=7
 ```
 
+Howto retrieve files already backed up by Hpyerbackup.
 ```
 https://kb.synology.com/en-us/DSM/tutorial/How_to_retrieve_backup_files_with_Hyper_Backup_Explorer
 ```

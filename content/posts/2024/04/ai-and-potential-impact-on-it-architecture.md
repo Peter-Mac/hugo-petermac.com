@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "AI and potential impact on IT Architecture"
 subtitle: "Hold onto your hats!"
 date: 2024-04-06

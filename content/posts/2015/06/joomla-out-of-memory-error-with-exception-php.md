@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Joomla out of memory error with exception.php"
 date: 2015-06-01
 categories: 

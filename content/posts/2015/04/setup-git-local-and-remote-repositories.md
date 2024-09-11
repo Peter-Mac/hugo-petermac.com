@@ -1,5 +1,5 @@
 ---
-type: post
+layout: post
 title: "Setup Git Local and Remote Repositories"
 date: 2015-04-14
 categories: 
