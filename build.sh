@@ -1,4 +1,5 @@
 #!/bin/sh
+# set an stop condition if anything goes wrong
 set -ex
 rm -rf public
 rm -rf static/pagefind && rm -rf static/_pagefind # kill prev PF index, if any
