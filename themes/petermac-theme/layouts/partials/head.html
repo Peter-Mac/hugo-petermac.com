@@ -53,6 +53,9 @@
     <!-- petermac CSS -->
     <link rel="stylesheet" href="{{ "css/petermac.css" | relURL }}">
 
+    <!-- pagefind assets -->
+    <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">    
+
     <!--  Custom CSS  -->
     {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
@@ -70,6 +73,9 @@
     <!-- lazy load image JavaScript -->
     <script src="{{ "js/lazysizes.min.js" | relURL }}"></script>
 
+    <!-- pagefind JavaScript -->
+    <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
+    
     <!-- Custom JS -->
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
