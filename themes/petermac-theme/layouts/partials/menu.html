@@ -1,7 +1,7 @@
 
 {{- range site.Menus.main.Sort.ByWeight.Reverse }}
     <li>
-  <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} href="{{ .URL }}">
+  <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} href="{{ .URL }}" title="{{ .Name }}">
     {{ .Name }}
   </a>
 </li>
