@@ -12,7 +12,7 @@ tags:
 
 ## Background
 
-This is the first article published to my new revamped website using a new publishing tool [Hugo Static Site Generator](https://gohugo.io). My website has been running on Wordpress for pretty much as long as I can remember and the first time I ran into the concept of a static site was working for a university here in Melbourne. It didn't gel with me at the time because of the amound of non-static content that was in use. However, when I look at my own site running Wordpress, Maria DB on a Nginx web server, I realised I was over-cooking it.  
+This is the first article published to my new revamped website using a new publishing tool [Hugo Static Site Generator](https://gohugo.io). My website has been running on Wordpress for pretty much as long as I can remember and the first time I ran into the concept of a static site was working for a university here in Melbourne. It didn't gel with me at the time because of the amount of non-static content that was in use. However, when I look at my own site running Wordpress, Maria DB on a Nginx web server, I realised I was over-cooking it.  
 
 Automation is the key to a lot of what I do and I wanted to be able to create an [Ansible](https://opensource.com/article/21/3/ansible-sysadmin) enabled way to easily redeploy the petermac.com stite within my own hosting environment. This would typically involve generating the docker containers to host the wordpress and maria db images, another for Nginx, then populating the database with extracts from backup. 
 
@@ -44,6 +44,13 @@ It is possible to use a theme and keep it intact while replicating files in your
 For search, I've opted for [Pagefind](https://pagefind.app) which acts as a lightweight indexer of your content and the implementation is relatively straightforward.
 
 For deployment, I'm pushing the content to cloudflare pages. Initially I used the CF web portal to create the pages site and set up a project, but then when I saw the ability to use a CLI tool which fits nicely into my workflow, I was all set. 
+
+## The Downsides
+I have three primary devies in my work life. My own laptop, my client provided laptop and my trysty iPad. Needless to say my client provided laptop doesnt come into the picture except for the added weight in my backpack. I will only carry my personal laptop if I need to do any serious tech work on a given day, otherwise it stays at the kitchen bench. Otherwise my iPad is generally with me when remote from home-office. So, how do I now propose to interact with the new Hugo site.
+
+Options available are:
+1. SSH from iPad using the Blink App to a remote dev server that's I use as a go-to for a lot of my tinkering and testing. Question here is what do I use to generate the content?
+2.  
 
 ## Publish Process
 1. Create a new folder under the Content/Year/Month structure.  I will usually name the folder with the name of the post I'm about to create. 
@@ -88,6 +95,11 @@ npm_config_yes=true npx serve public -d -l tcp://${MY_IP}
 # then execute this command (ensuring the project name matches one already created)
 npm_config_yes=true npx wrangler pages deploy public --project-name="hugo-petermac-com" --commit-dirty=true
 ```
+
+## TODO
+There's still a few tidy up jobs to do
+[ ] convert the article_title.md files to index.md and put them in specific folders
+[ ] comment code segments so I dont forget what works where
 
 _FootNotes_
 [^1] Pain In The Ass
