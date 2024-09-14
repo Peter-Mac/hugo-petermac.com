@@ -100,6 +100,7 @@ npm_config_yes=true npx wrangler pages deploy public --project-name="hugo-peterm
 There's still a few tidy up jobs to do
 [ ] convert the article_title.md files to index.md and put them in specific folders
 [ ] comment code segments so I dont forget what works where
+[ ] run tests against WCAG standards and ensure I've adhered to best practice
 
 _FootNotes_
 [^1] Pain In The Ass
