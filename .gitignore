@@ -1,9 +1,6 @@
 .DS_Store
 public
-resources/_gen/assets/css
-resources/_gen/assets/scss
-# resources/_gen/assets
-resources/_gen/getresource
+resources/*
 # --- the above line is so tweets/toots won't be "noisy"
 # resources/json
 # resources/_gen/images/images/social-OG-w-BW-logo_1024x512*.*
