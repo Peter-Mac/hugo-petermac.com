@@ -151,10 +151,18 @@
             </div>
         </div>
     </div>
-</footer>
+
+    {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+    {{ $js := $bootstrap | fingerprint }}   
+
+    <!-- JavaScript and dependencies -->
+
+  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
 
 
-
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+ 
 <!-- async load function -->
 <script>
     function loadAsync(u, c) {
@@ -339,3 +347,5 @@
 })();
 </script>
 {{ end }}
+
+</footer>
