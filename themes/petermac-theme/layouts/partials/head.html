@@ -46,34 +46,37 @@
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
     <!-- Clean White theme CSS -->
-    {{ $css := resources.Get "css/hugo-theme-cleanwhite.css" | minify }}
-    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.css" | relURL }}">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="{{ "css/font-awesome.all.min.css" | relURL }}">
 
     <!-- custom CSS -->
-    {{ $css := resources.Get "css/custom.css" | minify }}
-    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 
     <!-- pagefind assets -->
-    {{ $css := resources.Get "pagefind/pagefind-ui.css" | minify }}
-    <link href="{{ $css.RelPermalink }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">
 
     <!-- end CSS -->
     <link rel="shortcut icon"  type="image/x-icon" href="{{ "img/favicon.ico" | relURL }}">
 
     <!-- jQuery -->
-    <script src="{{ "js/jquery.min.js" | relURL }}"></script>
+    {{ with resources.Get "js/jquery.js" | minify }}  
+        <script>{{ .Content | safeJS }}</script>  
+    {{ end }}
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ "js/bootstrap.min.js" | relURL }}"></script>
+    {{ with resources.Get "js/bootstrap.js" | minify }}  
+        <script>{{ .Content | safeJS }}</script>  
+    {{ end }}
 
     <!-- Hux Theme JavaScript -->
-    <script src="{{ "js/hux-blog.min.js" | relURL }}"></script>
+    {{ with resources.Get "js/hux-blog.js" | minify }}  
+        <script>{{ .Content | safeJS }}</script>  
+    {{ end }}
 
     <!-- pagefind JavaScript -->
+    <!-- Doesnt live in the assets/js folder so can't be loaded as a resource-->
     <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
     
     <!-- Custom JS -->
