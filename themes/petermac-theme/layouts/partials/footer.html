@@ -157,6 +157,11 @@
         <script>{{ .Content | safeJS }}</script>  
     {{ end }}
 
+    <!-- jQuery -->
+    {{ with resources.Get "js/jquery.nav.js" | minify }}  
+        <script>{{ .Content | safeJS }}</script>  
+    {{ end }}
+
     <!-- Bootstrap Core JavaScript -->
     {{ with resources.Get "js/bootstrap.js" | minify }}  
         <script>{{ .Content | safeJS }}</script>  
@@ -167,10 +172,6 @@
         <script>{{ .Content | safeJS }}</script>  
     {{ end }}
 
-    <!-- pagefind JavaScript -->
-    <!-- Doesnt live in the assets/js folder so can't be loaded as a resource-->
-    <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
-    
     <!-- Custom JS -->
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
