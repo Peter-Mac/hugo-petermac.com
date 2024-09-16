@@ -62,17 +62,18 @@ background-size: 11.1%; /* This is at 6-columns -> just change this # */
 
 body {
   height: 100%;
-  font-size: 100%;
+  font-size: 17px;
   margin: 0;
   padding: 0;
   font-family: "raleway", sans-serif;
+  font-size: 17px;
   line-height: 1.5;
-  color: #4d4d4d;
-  background: #38312f;
+  color: #1A1A1A;
+  background:#ededed;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
   -ms-word-wrap: break-word;
-}
+} 
 
 .overflow-container {
   overflow: hidden;
@@ -82,10 +83,10 @@ body {
 }
 
 .main {
-  background: #38312f;
+  background: #fefefe;
   padding-bottom: 1.5em;
   margin: 0 auto;
-}
+} 
 
 .loop-container:after {
   content: ".";
@@ -102,12 +103,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #38312f;
+  color: #c8370e;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 a:link {
-  color: #38312f;
+  color: #c8370e;
 }
 a:visited, a:hover, a:active, a:focus {
   color: black;
@@ -2709,4 +2710,3 @@ li.pingback:first-child {
     width: 500px !important;
   }
 }
-

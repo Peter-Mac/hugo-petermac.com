@@ -37,13 +37,13 @@
     color:#bfbfbf!important
 }
 .sidebar-container a:hover,.sidebar-container a:active{
-    color:#0085a1!important
-}
+    color:#d03a10!important
+} 
 .sidebar-container .tags a{
-    border-color:#bfbfbf
+    border-color:coral
 }
 .sidebar-container .tags a:hover,.sidebar-container .tags a:active{
-    border-color:#0085a1
+    border-color:coral
 }
 .sidebar-container .short-about img{
     width:80%;
@@ -82,7 +82,7 @@ a{
     color:#404040
 }
 a:hover,a:focus{
-    color:#0085a1
+    color:#d03a10;
 }
 a img:hover,a img:focus{
     cursor:zoom-in
@@ -138,15 +138,14 @@ pre code{
     white-space:pre;
     word-wrap:normal
 }
-.post-container a{
-    color:#337ab7
-}
+
 .post-container a:hover,.post-container a:focus{
-    color:#0085a1
+    color:#d03a10;
 }
 .post-container h1,.post-container h2,.post-container h3,.post-container h4,.post-container h5,.post-container h6{
     margin:30px 0 10px
 }
+
 .post-container h5{
     font-size:19px;
     font-weight:600;
@@ -472,7 +471,7 @@ pre code{
 }
 .post-preview>a:hover,.post-preview>a:focus{
     text-decoration:none;
-    color:#0085a1
+    color:#d83b0c;
 }
 .post-preview>a>.post-title{
     font-size:21px;
@@ -496,7 +495,7 @@ pre code{
 }
 
 .post-preview>.post-meta>a:hover,.post-preview>.post-meta>a:focus{
-    color:#0085a1;
+    color:#d83b0c;
     text-decoration:none
 }
 @media only screen and (min-width:768px){
@@ -515,10 +514,10 @@ pre code{
 .post-content-preview{
     font-size:13px;
     font-style:italic;
-    color:#a3a3a3
+    color:#3f3f3f
 }
 .post-content-preview:hover{
-    color:#0085a1
+    color:#d83b0c
 }
 @media only screen and (min-width:768px){
     .post-content-preview{
