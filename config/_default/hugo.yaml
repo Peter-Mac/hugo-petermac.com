@@ -14,7 +14,8 @@ outputs:
   home:
     - HTML
     - RSS
-  
+    - JSON
+    
 sitemap:
   changefreq: weekly
   priority: 0.5
@@ -48,6 +49,9 @@ params:
   sidebar_avatar: img/peter-mac.png
   image_404: img/tram.webp
   email_obfuscation: local
+
+  # Additional search engine parameter
+  search_engine = "pagefind"
 
   menus:
     main:
