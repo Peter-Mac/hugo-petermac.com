@@ -1,8 +1,13 @@
+    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{ if .Params.noindex }}
+    <meta name="robots" content="noindex">
+    {{ end }}
+    
     <!-- start ogp -->
     <meta property="og:site_name" content="{{ .Site.Params.og.site_name }}">
     <meta property="og:type" content="article">
@@ -35,31 +40,32 @@
     {{ partial "seo_schema" . }}
 
     <meta name="keyword"  content="{{ .Site.Params.keyword }}">
-    <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
+    <!-- Start CSS -->
 
-    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
+    <!-- Bootstrap CSS -->
 
-    <link rel="canonical" href="{{ .RelPermalink }}">
-
-    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
     <!-- Clean White theme CSS -->
-    <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.min.css" | relURL }}">
+
+    <link rel="stylesheet" href="{{ "css/hugo-theme-cleanwhite.css" | relURL }}">
+    
 
     <!-- Custom Fonts -->
+
     <link rel="stylesheet" href="{{ "css/font-awesome.all.min.css" | relURL }}">
 
-    <!-- petermac CSS -->
-    <link rel="stylesheet" href="{{ "css/petermac.css" | relURL }}">
+    <!-- custom CSS -->
 
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    
     <!-- pagefind assets -->
-    <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">    
 
-    <!--  Custom CSS  -->
-    {{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-    {{- end }}
+    <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">
+
+   
+    <!-- end CSS -->
+    <link rel="shortcut icon"  type="image/x-icon" href="{{ "img/favicon.ico" | relURL }}">
 
     <!-- jQuery -->
     <script src="{{ "js/jquery.min.js" | relURL }}"></script>
