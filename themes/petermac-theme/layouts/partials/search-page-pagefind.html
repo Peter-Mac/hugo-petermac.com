@@ -15,11 +15,20 @@
     }
   </style>
 
-    <div id="search" data-pagefind-ignore></div>
+	<script src="/pagefind/pagefind-ui.js" type="text/javascript" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
 
-	<script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+    <div id="search" data-pagefind-ignore>
 
-
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			new PagefindUI({
+				element: "#search",
+				showImages: false
+			});
+		});
+	</script>
+	</div>
+	
 <noscript data-pagefind-ignore>
 	<div class="searchDivPF" data-pagefind-ignore>
 		<p>Since you have JavaScript disabled, you can use the following form to search this site with&nbsp;<a href="https://duckduckgo.com" rel="noopener">DuckDuckGo</a>,&nbsp;instead.<br />
