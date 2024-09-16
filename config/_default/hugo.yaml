@@ -15,7 +15,7 @@ outputs:
     - HTML
     - RSS
     - JSON
-    
+
 sitemap:
   changefreq: weekly
   priority: 0.5
@@ -51,7 +51,8 @@ params:
   email_obfuscation: local
 
   # Additional search engine parameter
-  search_engine = "pagefind"
+  search_engine:
+    - pagefind
 
   menus:
     main:
