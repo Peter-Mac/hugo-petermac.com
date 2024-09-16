@@ -153,24 +153,20 @@
     </div>
 
     <!-- jQuery -->
-    {{ with resources.Get "js/jquery.js" | minify }}  
-        <script>{{ .Content | safeJS }}</script>  
-    {{ end }}
+    {{ $js := resources.Get "js/jquery.js" | minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
 
-    <!-- jQuery -->
-    {{ with resources.Get "js/jquery.nav.js" | minify }}  
-        <script>{{ .Content | safeJS }}</script>  
-    {{ end }}
+    <!-- jQuery.nav -->
+    {{ $js := resources.Get "js/jquery.nav.js" | minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    {{ with resources.Get "js/bootstrap.js" | minify }}  
-        <script>{{ .Content | safeJS }}</script>  
-    {{ end }}
+    {{ $js := resources.Get "js/bootstrap.js" | minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
 
     <!-- Hux Theme JavaScript -->
-    {{ with resources.Get "js/hux-blog.js" | minify }}  
-        <script>{{ .Content | safeJS }}</script>  
-    {{ end }}
+    {{ $js := resources.Get "js/hux-blog.js" | minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
 
     <!-- Custom JS -->
     {{ range .Site.Params.custom_js }}
@@ -184,8 +180,6 @@
 
   {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
   {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
-
-
     <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
  
 <!-- async load function -->
@@ -285,7 +279,7 @@
      * Fork by Hux to support padding
      */
 
-    loadAsync("{{ `js/jquery.nav.js` | relURL }}", function () {
+    loadAsync("{{ `js/jquery.nav.min.js` | relURL }}", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
