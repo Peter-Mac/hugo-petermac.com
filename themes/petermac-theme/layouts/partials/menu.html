@@ -1,5 +1,5 @@
 
-{{- range site.Menus.main.Sort.ByWeight.Reverse }}
+{{- range site.Menus.main }}
     <li>
   <a {{ with .Params.class -}} class="{{ . }}" {{ end -}} href="{{ .URL }}" title="{{ .Name }}">
     {{ .Name }}

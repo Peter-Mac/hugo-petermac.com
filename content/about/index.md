@@ -1,9 +1,8 @@
 ---
-menus:
-    main:
-        title: 'About'
+menus: main
 layout: page
 title: 'About Me'
+weight: 30
 date: '2024-08-18'
 description: "About Peter Mac"
 enableComments: false

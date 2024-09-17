@@ -1,7 +1,8 @@
 ---
 layout: page
-menus: main
+menus:  main
 title: 'cv'
+weight: 60
 date: '2024-08-18'
 description: "Peter Mac's CV"
 enableComments: false

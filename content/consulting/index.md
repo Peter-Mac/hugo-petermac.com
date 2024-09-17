@@ -2,6 +2,7 @@
 layout: page
 menus: main
 title: 'Consulting'
+weight: 20
 date: '2024-08-18'
 description: "Peter Mac Consulting Services"
 enableComments: false

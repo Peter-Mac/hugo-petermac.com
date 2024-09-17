@@ -5,16 +5,9 @@ pagination.pagerSize: 5
 hasCJKLanguage: false
 enableRobotsTXT: true
 timeZone: 'Australia/Melbourne'
-rssLimit: 10 # default is -1 (unlimited); setting of '10' conforms to Eleventy repo's handling
 summaryLength: 30 # words --- if you use summaries **without** the `--more--` workaround
 theme: petermac-theme
 relativeURLS: true
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
 
 sitemap:
   changefreq: weekly
@@ -58,19 +51,14 @@ params:
     main:
     - name: Consulting
       pageRef: /consulting
-      weight: 10
     - name: Services
       pageRef: /services
-      weight: 20
     - name: About
       pageRef: /about
-      weight: 30
     - name: Contact
       pageRef: /contact
-      weight: 40
     - name: Cv
       pageRef: /cv
-      weight: 50
 
   og:
     site_name: "Peter Mac - IT Architect &amp; Consultant | I'm a consulting technology 
@@ -82,7 +70,7 @@ params:
       and outcome focus"
 
   social:
-    rss: true
+    rss: false
     linkedin: 'https://www.linkedin.com/in/peter-mac-44135121/'
     github: 'https://github.com/Peter-Mac'
 

@@ -1,7 +1,8 @@
 ---
-menus: main
 layout: page
 title: 'Services'
+menus: main
+weight: 20
 date: '2024-08-18'
 description: "Services provided by Peter Mac"
 enableComments: false
