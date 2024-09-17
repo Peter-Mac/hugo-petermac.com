@@ -1,0 +1,9 @@
+outputs:
+  home:
+    - html
+  section:
+    - html
+
+# Output to rss / json for feed readers.
+#    - rss
+#    - json
