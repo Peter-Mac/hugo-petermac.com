@@ -7,6 +7,7 @@ date: '2020-01-01'
 description: "How to contact Peter Mac"
 enableComments: false
 draft: false
+showtoc: false
 image: contact/fax-machine.webp
 ---
 
