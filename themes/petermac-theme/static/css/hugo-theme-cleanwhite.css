@@ -305,13 +305,13 @@ pre code{
     color:#404040	
 }	
 .navbar-custom.invert .navbar-brand:hover,.navbar-custom.invert .navbar-brand:focus{	
-    color:#0085a1	
+    color:#d03a10
 }	
 .navbar-custom.invert .nav li a{	
     color:#404040	
 }	
 .navbar-custom.invert .nav li a:hover,.navbar-custom.invert .nav li a:focus{	
-    color:#0085a1	
+    color:#d03a10	
 }
 @media only screen and (min-width:1170px){
     .navbar-custom{
@@ -339,13 +339,13 @@ pre code{
         color:#404040
     }
     .navbar-custom.is-fixed .navbar-brand:hover,.navbar-custom.is-fixed .navbar-brand:focus{
-        color:#0085a1
+        color:#d03a10
     }
     .navbar-custom.is-fixed .nav li a{
         color:#404040
     }
     .navbar-custom.is-fixed .nav li a:hover,.navbar-custom.is-fixed .nav li a:focus{
-        color:#0085a1
+        color:#d03a10
     }
     .navbar-custom.is-visible{
         -webkit-transform:translate3d(0,100%,0);
@@ -553,10 +553,10 @@ footer .copyright{
     margin-bottom:0
 }
 footer .copyright a{
-    color:#337ab7
+    color:#d03a10
 }
 footer .copyright a:hover,footer .copyright a:focus{
-    color:#0085a1
+    color:#d03a10
 }
 .floating-label-form-group{
     font-size:14px;
@@ -622,8 +622,8 @@ form .row:first-child .floating-label-form-group{
     padding:25px 35px
 }
 .btn-default:hover,.btn-default:focus{
-    background-color:#0085a1;
-    border:1px solid #0085a1;
+    background-color:#d03a10;
+    border:1px solid #d03a10;
     color:#fff
 }
 .pager{
@@ -653,8 +653,8 @@ form .row:first-child .floating-label-form-group{
 }
 .pager li>a:hover,.pager li>a:focus{
     color:#fff;
-    background-color:#0085a1;
-    border:1px solid #0085a1
+    background-color:#d03a10;
+    border:1px solid #d03a10
 }
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>a:focus,.pager .disabled>span{
     color:gray;
@@ -664,12 +664,12 @@ form .row:first-child .floating-label-form-group{
 ::-moz-selection{
     color:#fff;
     text-shadow:none;
-    background:#0085a1
+    background:#d03a10
 }
 ::selection{
     color:#fff;
     text-shadow:none;
-    background:#0085a1
+    background:#d03a10
 }
 img::selection{
     color:#fff;
@@ -728,7 +728,7 @@ body{
     background:#D6D6D6
 }
 #tag_cloud a:hover,#tag_cloud .tag:hover,#tag_cloud a:active,#tag_cloud .tag:active{
-    background-color:#0085a1!important
+    background-color:#d03a10!important
 }
 @media only screen and (min-width:768px){
     #tag_cloud{
@@ -747,7 +747,7 @@ body{
     margin-top:0
 }
 .listing-seperator{
-    color:#0085a1;
+    color:#d03a10;
     font-size:21px!important
 }
 .listing-seperator::before{
@@ -982,7 +982,7 @@ body{
     background-color: #f5f5f5;
   }
   .side-catalog .catalog-body .active a {
-    color: #0085a1 !important;
+    color: #d03a10 !important;
   }
   @media (max-width: 1200px) {
     .side-catalog {
