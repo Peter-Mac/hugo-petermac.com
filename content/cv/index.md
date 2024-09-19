@@ -172,13 +172,17 @@ Method was the primary supplier of Telstra’s Intranet system software. The ent
 
 Team lead in the eCommerce division focusing on streamlining on-line applications. This grew into a project designed to streamline applications to include legacy systems including credit checking, account opening and workflow. My role then became one of liaison and relationship building with key business and technical staff within other divisions. This role gave me an opportunity to present a unified and comprehensive systems approach to senior management.
 
-### Prior to this, I worked in Dublin, Ireland
+### Ireland
+Prior to Australia, I worked in my hometown of Dublin, Ireland
 
-**AIG (Ireland) – Developer – May 1998 – April 1999**
-**Flextime (Ireland) – Developer – Aug 1997 – May 1998**
-**Fineos (Ireland) – Release Mgmt/System Admin – May 1996 – Aug 1997**
+**AIG (Ireland)** – Developer – May 1998 – April 1999
+
+**Flextime (Ireland)** – Developer – Aug 1997 – May 1998
+
+**Fineos (Ireland)** – Release Mgmt/System Admin – May 1996 – Aug 1997
 
 ### Education
+
 - 1993 – 1994 Senior College Dun Laoghaire, County Dublin
 
 - Diploma in Data Processing and Information Systems
