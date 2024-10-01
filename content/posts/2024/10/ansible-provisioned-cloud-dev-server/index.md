@@ -8,7 +8,8 @@ tags:
   - automation
 ---
 
-## Background
+Creating an automated development sandbox so I don't waste time wondering what I broke last.
+
 I use a long term Linode server as a test and learn palyground. I find it useful to have a non mission-critical server to which I can test out various tools and services on. Unfortunately, over time this box by its very nature is prone to tech drift as I look back at my command history, I can see the times where I've installed lots of experimental libraries, repositories and other software versions.
 The idea with this project is to create the ability at any time to go back to basics, nuke the box and start playing all over again with ansible used for automation of the setup and install.
 
