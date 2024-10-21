@@ -23,7 +23,7 @@ My interests include:
 - Web technologies (mainly backend focus)
 - Home Automation (Using Home Assistant)
 - Photography (Nikon, Fujifilm, Street, Landscapse, People)
-- Motorcycling (Adventure riding, of roading, Royal Enfield Himalayan)
+- Motorcycling (Adventure riding, off roading, Royal Enfield Himalayan)
 - Cycling (Giant Trek (~2003) and Cervelo S3 (~2014))
 
 This is what ChatGPT says about me...
