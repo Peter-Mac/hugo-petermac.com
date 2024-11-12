@@ -33,7 +33,7 @@ Effective and cheaper than the Philips ones. Multi colour, identifiable and cont
   
 **Motion Sensors**
 
-Very finicky to set up - multiple attempts failed, then as if by magic (and with support from the 3aSmarthome guys everything worked but I’m still not sure what I changed - the Hui app is extremely frustrating in its simplicity and lack of intuitive controls.**Once a motion sensor is set to trigger based on motion, it cant be set to trigger by motion within a timeframe <TODO>**. This results in lights coming on at all times during the day? I’m sure I need to go back to the dreaming board with this...it just cant be so!!  
+Very finicky to set up - multiple attempts failed, then as if by magic (and with support from the 3aSmarthome guys everything worked but I’m still not sure what I changed - the Hui app is extremely frustrating in its simplicity and lack of intuitive controls. This results in lights coming on at all times during the day? I’m sure I need to go back to the dreaming board with this...it just cant be so!!  
 
 I also purchased a few Philips Hue motion sensors given the trials I had with the 3A ones. The outcome is that they can only be used to control other Philips Hue devices and the 3A smart lights. They can’t be used to control the 3a light switches...this is a bummer given the number of switches I’ve installed. Upshot is install smart lights where you want motion control (via Philips Hue) and switches where voice control is preferred.  
 

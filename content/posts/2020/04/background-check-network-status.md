@@ -45,14 +45,6 @@ To start it simply type
 
 To kill it, look for it's pid and kill issue the kill command
 
-<figure>
 
-![](/images/2020-04-24-kill_ps.jpg)
-
-<figcaption>
-
-killing the running background process
-
-</figcaption>
-
-</figure>
+![Kill the running background process](/images/2020-04-24-kill_ps.jpg)
+Killing the running background process

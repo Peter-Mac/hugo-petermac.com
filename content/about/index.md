@@ -22,8 +22,8 @@ I'm also a technology tinkerer which means I've generally got a few projects on 
 My interests include:
 - Web technologies (mainly backend focus)
 - Home Automation (Using Home Assistant)
-- Photography (Nikon, Fujifilm, Street, Landscapse, People)
-- Motorcycling (Adventure riding, off roading, Royal Enfield Himalayan)
+- Photography (Nikon, Fujifilm, Street, Landscape, People)
+- Motorcycling (Adventure riding, off roading, Royal Enfield Himalayan, BMW GS 650)
 - Cycling (Giant Trek (~2003) and Cervelo S3 (~2014))
 
 This is what ChatGPT says about me...
