@@ -173,12 +173,12 @@
     <script src="{{ . | absURL }}"></script>
     {{ end }}
     
-    {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+    {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
     {{ $js := $bootstrap | fingerprint }}   
 
     <!-- JavaScript and dependencies -->
 
-  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+  {{ $bootstrap := resources.Get "js/bootstrap.min.js" }}
   {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
     <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
  
