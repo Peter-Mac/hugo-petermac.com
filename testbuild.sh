@@ -2,4 +2,4 @@
 
 # Runs both the build and the serve commands
 sh ./build.sh
-sh ./serve.sh
+sh ./start.sh
