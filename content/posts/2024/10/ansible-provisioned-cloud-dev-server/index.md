@@ -10,7 +10,7 @@ tags:
 
 Creating an automated development sandbox so I don't waste time wondering what I broke last.
 
-I use a long term Linode server as a test and learn palyground. I find it useful to have a non mission-critical server to which I can test out various tools and services on. Unfortunately, over time this box by its very nature is prone to tech drift as I look back at my command history, I can see the times where I've installed lots of experimental libraries, repositories and other software versions.
+I use a long term Linode server as a test and learn playground. I find it useful to have a non mission-critical server to which I can test out various tools and services on. Unfortunately, over time this box by its very nature is prone to tech drift as I look back at my command history, I can see the times where I've installed lots of experimental libraries, repositories and other software versions.
 The idea with this project is to create the ability at any time to go back to basics, nuke the box and start playing all over again with ansible used for automation of the setup and install.
 
 In order to get this working, I played around with a combination of dynamic inventory options and settled on the following approach:
@@ -34,7 +34,7 @@ There is a bit of manual tweaking involved (for the moment) which is creating a 
   - A root pasword to be used to access the server until the SSH key process is enabled
 - working install of ansible (e.g. brew install ansible, or whatever works for your system)
 
-**The github repository***
+**The github repository**
 
 [Here's a link to the github repository](https://github.com/Peter-Mac/ansible-linode-dev-server)
 
