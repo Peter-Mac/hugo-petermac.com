@@ -34,6 +34,11 @@ There is a bit of manual tweaking involved (for the moment) which is creating a 
   - A root pasword to be used to access the server until the SSH key process is enabled
 - working install of ansible (e.g. brew install ansible, or whatever works for your system)
 
+**The github repository***
+
+[Here's a link to the github repository](https://github.com/Peter-Mac/ansible-linode-dev-server)
+
+
 ## Results
 The running of the 2 playbooks (and the config of the SSH keys) will create a relatively secure Ubuntu based server with passwordless SSH access for a single user 'ubuntu'.
 If you want more than one server, simply add it as another node name under the linode_servers variable in the varibales file global_vars/main.yml
