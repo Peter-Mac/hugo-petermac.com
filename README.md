@@ -10,6 +10,24 @@ It is possible to use a theme and keep it intact while replicating files in your
 
 For search, I've opted for [Pagefind](https://pagefind.app) which acts as a lightweight indexer of your content and the implementation is relatively straightforward.
 
+To build the Pagefind index locally, I use the python option (as opposed to npm)
+
+```
+python3 -m venv hugoenv
+source hugoenv/bin/activate
+```
+
+```bash
+python3 -m pip install 'pagefind[extended]'
+```
+
+and then...
+
+```bash
+python3 -m pagefind --site public --serve
+```
+
+
 For deployment, I'm pushing the content to cloudflare pages. Initially I used the CF web portal to create the pages site and set up a project, but then when I saw the ability to use a CLI tool which fits nicely into my workflow, I was all set. 
 
 ## Publish Process
