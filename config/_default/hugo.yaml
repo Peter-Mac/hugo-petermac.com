@@ -8,6 +8,8 @@ timeZone: 'Australia/Melbourne'
 summaryLength: 30 # words --- if you use summaries **without** the `--more--` workaround
 theme: petermac-theme
 relativeURLS: true
+ignoreLogs: 
+  - 'warning-goldmark-raw-html'
 
 sitemap:
   changefreq: weekly
