@@ -8,8 +8,6 @@ tags:
   - letsencrypt
 ---
 
-# To renew as standalone and restart apache
-
 ```
 > sudo service apache2 stop sudo certbot certonly --standalone
 ```
