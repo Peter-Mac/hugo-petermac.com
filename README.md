@@ -45,3 +45,7 @@ For deployment, I'm pushing the content to cloudflare pages. Initially I used th
 
 7. Finally run the cloudflare_deploy script (which uses the wrangler command) to push the latest updates to the live site.
 
+```bash
+./cloudflare_deploy.sh
+```
+
