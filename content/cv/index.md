@@ -45,7 +45,11 @@ I bring to an organisation leadership in the technology domain, as both a though
 
 ### Employment History
 
-**Australia Post – Digital & Data Platforms Architect – June 2022 – Present**
+**Dulux Group – Digital Archictect – December 2024 – Present**
+
+Working with the digital and marketing platform teams to help deliver loyalty and strategic digital solutions for the Dulux Group business. I have been engaged in some interesting initiatives with cross-business impacts (marketing, finance, loyalty, product etc). 
+
+**Australia Post – Digital & Data Platforms Architect – June 2022 – November 2024**
 
 Stepping back into my role at Australia Post within the digital and data sphere, I’ve spearheaded the architectural strategy for a vibrant and agile domain, navigating multiple simultaneous initiatives under a structured governance framework. This role demanded a deep dive into the vast expanse of the digital landscape, from web and mobile development to notifications, tracking, scanning, CRM, CMS, and help and support systems.
 
