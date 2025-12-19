@@ -2,7 +2,7 @@
 layout: post
 title: "Moving from Subversion to Git"
 date: 2015-03-18
-categories: 
+categories:
   - "git"
 ---
 
@@ -68,7 +68,7 @@ Depending on your setup, this parameter will contain the path to your svn reposi
 
 –authors file – this is a file I created by hand containing a list of all the people who committed project material in the past. It’d format is as follows:
 
-peter= Peter Mac Giollafhearga simon= Simon Shagwell <simon\\'s email at his domain.com>
+peter= Peter Mac simon= Simon Shagwell <simon\\'s email at his domain.com>
 
 \-t tags -b branches -T trunk – these values are for completeness and I’m not sure they are necessary given the –stdlayout option, but if you’ve called your branches, tags and trunks anything different, this is how you find it.
 
