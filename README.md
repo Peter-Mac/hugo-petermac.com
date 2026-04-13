@@ -6,29 +6,27 @@ I've got a content folder with a combination of stand alone pages (about, servic
 
 Through lessons learned, I'd removed any UI based operations into a self-named themes folder. This contains the code I used from the original theme with modifications to suit my specific needs. 
 
-It is possible to use a theme and keep it intact while replicating files in your own layouts folder but I found myself continually editing the wrong version of the file and wondering why things weren't working. In the end I decided to keep the themes/peter-mac-theme folder and focus on getting that part working to process outputs according to my needs.
+It is possible to use a theme and keep it intact while replicating files in your own layouts folder but I found myself continually editing the wrong version of the file and wondering why things weren't working. In the end I decided to keep the themes/petermac-theme folder and focus on getting that part working to process outputs according to my needs.
 
-For search, I've opted for [Pagefind](https://pagefind.app) which acts as a lightweight indexer of your content and the implementation is relatively straightforward.
+## Installing Hugo
 
-To build the Pagefind index locally:
+On macOS, `brew install hugo` is the path I use. For anything else, see Hugo's [official install docs](https://gohugo.io/installation/) — they cover Linux package managers, Windows, and direct binary downloads.
 
-I originally uused the python option (as opposed to npm)
-```
-~~python3 -m venv hugoenv~~
-~~source hugoenv/bin/activate~~
+Keep Hugo current. After an upgrade, run `./build.sh` to catch any deprecation breakage early — Hugo surfaces removed template fields and renamed config keys as hard build errors, so they're easy to spot rather than silently wrong.
+
+## Search (Pagefind)
+
+For search I use [Pagefind](https://pagefind.app) as a lightweight content indexer. `build.sh` invokes it via npx after the Hugo build:
 
 ```bash
-python3 -m pip install 'pagefind[extended]'
+npx pagefind@latest --site ./public --output-subdir pagefind
 ```
 
-and then it broke...
+No local Pagefind install needed — npx downloads it to the per-user npm cache on first run.
 
-so for now go with the npx version which can be found as follows:
+## Deployment
 
-npx pagefind --site "public"
-
-
-For deployment, I'm pushing the content to cloudflare pages. Initially I used the CF web portal to create the pages site and set up a project, but then when I saw the ability to use a CLI tool which fits nicely into my workflow, I was all set.
+I deploy to Cloudflare Pages. Originally I set the project up through the CF web portal, then moved to the CLI (`wrangler`) once I realised it fit my workflow better.
 
 ### First-time Cloudflare deploy setup
 
@@ -48,7 +46,7 @@ Prerequisites for running `./cloudflare_deploy.sh`:
 
 4. When happy with the article wording run the build script (build.sh).
 
-5. To view in local preview (before committing anything) run the serve.sh script. This executes a local tcp service on whatever port you need (I go with default 3000)
+5. To view in local preview (before committing anything) run `./start.sh`. This executes a local preview server on port 3000 (bound to your LAN IP so you can view it from other devices on the network).
 
 6. Once happy with the content, commit everything to git with a simple git commit and git push.
 

@@ -15,20 +15,19 @@ The site serves two overlapping goals:
 When drafting or editing content, default to that voice. Avoid jargon, hype, and filler.
 
 ## Tech stack
-- **Site generator:** Hugo (currently 0.160.1 via Homebrew; `install.sh` pins a Linux/macOS fallback at 0.134.2).
+- **Site generator:** Hugo (installed via Homebrew on Mac; see README for other platforms). Currently running 0.160.1.
 - **Node / npm:** used only for Wrangler (Cloudflare deploy tool) as a devDep, and for invoking Pagefind via `npx`. `npm install` pulls Wrangler and its transitive deps only.
 - **Content indexing:** Pagefind, invoked via `npx pagefind@latest` at build time. No local install required — npx downloads to the per-user npm cache.
 - **Hosting & deploy:** GitHub hosts the repo. A GitHub hook triggers a Cloudflare worker on every content push, which rebuilds the live site.
 - **Theme:** custom theme at `themes/petermac-theme/` (kept in-repo, not vendored).
-- **Platform:** macOS only today. `get_ip.sh` uses `ipconfig getifaddr` which is macOS-specific; everything else is cross-platform.
+- **Platform:** macOS is Peter's working environment. Scripts are cross-platform-aware (`get_ip.sh` branches for Darwin and Linux); Linux paths are untested in practice.
 
 ### Local scripts
-- `install.sh` — bootstraps a fresh machine with a pinned Hugo version (Darwin or Linux). Not needed if Hugo is already installed via Homebrew/package manager.
 - `build.sh` — cleans `public/` + Pagefind index dirs, runs Hugo, builds the Pagefind index via `npx`.
 - `start.sh` — ensures `local_ip.txt` exists (via `get_ip.sh`), then runs `hugo server` on port 3000 bound to `0.0.0.0` with the LAN IP as `baseURL` (so preview is reachable from other devices on the network).
 - `testbuild.sh` — runs `build.sh` then `start.sh` for a full clean rebuild + live preview.
 - `cloudflare_deploy.sh` — one-line `npx wrangler pages deploy` for the `hugo-petermac-com` Cloudflare Pages project. See README for first-time setup.
-- `get_ip.sh` — writes the active LAN IP to `local_ip.txt`. macOS-specific (uses `ipconfig getifaddr`).
+- `get_ip.sh` — writes the active LAN IP to `local_ip.txt`. Branches for macOS (`ipconfig getifaddr`) and Linux (`ip route get` with `hostname -I` fallback).
 
 ## Repo layout
 - `config/` — Hugo configuration files and settings.
