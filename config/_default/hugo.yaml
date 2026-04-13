@@ -1,6 +1,6 @@
 baseURL: 'https://www.petermac.com'
 title: 'Peter Mac'
-languageCode: 'en-au'
+locale: 'en-au'
 pagination.pagerSize: 5
 hasCJKLanguage: false
 enableRobotsTXT: true
