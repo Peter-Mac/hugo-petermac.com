@@ -1,25 +1,26 @@
-#!/bin/bash
+#!/bin/sh
+# Writes the active LAN IP to local_ip.txt, used by start.sh as the
+# baseURL for the local Hugo preview server.
 
-# Define the output file
 output_file="local_ip.txt"
+ip_address=""
 
-# Get the active network interface with an IP address
-# `ipconfig getifaddr` will automatically select the primary interface
-ip_address=$(ipconfig getifaddr en0)  # Try Wi-Fi first
+case "$(uname -s)" in
+    Darwin)
+        ip_address=$(ipconfig getifaddr en0)
+        [ -z "$ip_address" ] && ip_address=$(ipconfig getifaddr en1)
+        ;;
+    Linux)
+        # Ask the kernel which source IP it would use to reach a public address.
+        ip_address=$(ip route get 1.1.1.1 2>/dev/null | awk '{for(i=1;i<=NF;i++) if ($i=="src") print $(i+1)}')
+        [ -z "$ip_address" ] && ip_address=$(hostname -I 2>/dev/null | awk '{print $1}')
+        ;;
+esac
 
-# If Wi-Fi doesn't have an IP, check the wired connection (usually en1 or similar on macOS)
-if [ -z "$ip_address" ]; then
-    ip_address=$(ipconfig getifaddr en1)
-fi
-
-# If there's still no IP (e.g., all interfaces down), log "Not Connected"
 if [ -z "$ip_address" ]; then
     echo "Not Connected" > "$output_file"
+    echo "No active LAN IP detected; wrote 'Not Connected' to $output_file"
 else
-    # Otherwise, log the IP address to the output file
     echo "$ip_address" > "$output_file"
+    echo "Local IP address ($ip_address) written to $output_file"
 fi
-
-# Notify the user where the IP has been written
-echo "Local IP address ($ip_address) has been written to $output_file"
-
