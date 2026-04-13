@@ -15,20 +15,20 @@ The site serves two overlapping goals:
 When drafting or editing content, default to that voice. Avoid jargon, hype, and filler.
 
 ## Tech stack
-- **Site generator:** Hugo, run from a local environment that's intended to be cross-platform transferrable.
-- **Node / npm:** used for theme assets (Bootstrap) and the Cloudflare deploy tool (Wrangler) — see `package.json`.
-- **Content indexing:** Pagefind, installed via Python (`requirements.txt` → `pagefind`). The Python venv lives at `hugoenv/`.
+- **Site generator:** Hugo (currently 0.160.1 via Homebrew; `install.sh` pins a Linux/macOS fallback at 0.134.2).
+- **Node / npm:** used only for Wrangler (Cloudflare deploy tool) as a devDep, and for invoking Pagefind via `npx`. `npm install` pulls Wrangler and its transitive deps only.
+- **Content indexing:** Pagefind, invoked via `npx pagefind@latest` at build time. No local install required — npx downloads to the per-user npm cache.
 - **Hosting & deploy:** GitHub hosts the repo. A GitHub hook triggers a Cloudflare worker on every content push, which rebuilds the live site.
-- **Theme:** custom theme at `themes/peter-mac-theme/` (kept in-repo, not vendored).
+- **Theme:** custom theme at `themes/petermac-theme/` (kept in-repo, not vendored).
+- **Platform:** macOS only today. `get_ip.sh` uses `ipconfig getifaddr` which is macOS-specific; everything else is cross-platform.
 
 ### Local scripts
-> The scripts below work, but Peter has flagged that they (and `install.sh` in particular) **may need an overhaul**.
-- `install.sh` — overarching script to set up a fresh dev environment from scratch.
-- `python_setup.sh` — sets up the Python side of the dev environment (Pagefind).
-- `build.sh` — wipes `public/` and the Pagefind index dirs, runs `hugo` (with `--minify`, `--cleanDestinationDir`, debug logging, etc.), then builds the Pagefind index. **Prefers `npx pagefind@latest`** and only falls back to `python3 -m pagefind` if `npx` isn't on PATH.
-- `start.sh` — ensures `local_ip.txt` exists (calling `get_ip.sh` if not), wipes `public/` and the Pagefind index dirs, then runs `hugo server` on port 3000 bound to `0.0.0.0` with the LAN IP as `baseURL` (so the dev preview is reachable from other devices on the network).
-- `testbuild.sh` — convenience wrapper: runs `build.sh` then `start.sh`. Note that `start.sh` re-cleans `public/` before serving, so the `build.sh` output is effectively discarded; for a normal local preview, `start.sh` alone is enough.
-- `cloudflare_deploy.sh` — pushes content to trigger the Cloudflare rebuild.
+- `install.sh` — bootstraps a fresh machine with a pinned Hugo version (Darwin or Linux). Not needed if Hugo is already installed via Homebrew/package manager.
+- `build.sh` — cleans `public/` + Pagefind index dirs, runs Hugo, builds the Pagefind index via `npx`.
+- `start.sh` — ensures `local_ip.txt` exists (via `get_ip.sh`), then runs `hugo server` on port 3000 bound to `0.0.0.0` with the LAN IP as `baseURL` (so preview is reachable from other devices on the network).
+- `testbuild.sh` — runs `build.sh` then `start.sh` for a full clean rebuild + live preview.
+- `cloudflare_deploy.sh` — one-line `npx wrangler pages deploy` for the `hugo-petermac-com` Cloudflare Pages project. See README for first-time setup.
+- `get_ip.sh` — writes the active LAN IP to `local_ip.txt`. macOS-specific (uses `ipconfig getifaddr`).
 
 ## Repo layout
 - `config/` — Hugo configuration files and settings.
@@ -42,9 +42,7 @@ When drafting or editing content, default to that voice. Avoid jargon, hype, and
 - `*.sh` — local scripts (see Tech stack → Local scripts).
 
 ## Common commands
-Day-to-day work is driven by the bash scripts listed under [Tech stack → Local scripts](#local-scripts) (`install.sh`, `python_setup.sh`, `build.sh`, `testbuild.sh`, `cloudflare_deploy.sh`). There's nothing exotic beyond those.
-
-The only other commands you'll see are standard Python venv invocations — e.g. `source hugoenv/bin/activate` to enter the environment Pagefind is installed in.
+Day-to-day work runs through the bash scripts listed under [Tech stack → Local scripts](#local-scripts). Nothing exotic beyond those.
 
 ## Authoring conventions
 
