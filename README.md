@@ -28,7 +28,16 @@ so for now go with the npx version which can be found as follows:
 npx pagefind --site "public"
 
 
-For deployment, I'm pushing the content to cloudflare pages. Initially I used the CF web portal to create the pages site and set up a project, but then when I saw the ability to use a CLI tool which fits nicely into my workflow, I was all set. 
+For deployment, I'm pushing the content to cloudflare pages. Initially I used the CF web portal to create the pages site and set up a project, but then when I saw the ability to use a CLI tool which fits nicely into my workflow, I was all set.
+
+### First-time Cloudflare deploy setup
+
+Prerequisites for running `./cloudflare_deploy.sh`:
+
+1. **Node.js** available locally (I use `nvm` — `nvm install lts/jod` then `nvm use lts/jod`).
+2. **Wrangler**: pulled in by `npm install` in the project (it's a devDep).
+3. **Cloudflare auth**: `npx wrangler login` — one-time per machine.
+4. The Cloudflare Pages project `hugo-petermac-com` must already exist.
 
 ## Publish Process
 1. Create a new folder under the Content/Year/Month structure.  I will usually name the folder with the name of the post I'm about to create. 
