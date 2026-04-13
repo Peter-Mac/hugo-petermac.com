@@ -66,6 +66,13 @@ Do not commit content on Peter's behalf without that explicit review step. The C
 - **Reuse existing tags** where appropriate — check what's already in use before inventing new ones.
 - New tags are fine when no existing tag fits; don't force a bad match just to avoid adding one.
 
+### Changelog & TODO
+Two project-meta files to keep current:
+- **`CHANGELOG.md`** — append an entry under a dated section after any meaningful infrastructure or tooling change. Not for content/post additions (those live in git log).
+- **`TODO.md`** — parked items and future work. When a TODO is actioned, move it into the CHANGELOG and remove it from here. When something gets flagged during a session but isn't actioned, add it here.
+
+Keep entries short; match the tone of the existing files.
+
 ## Things to avoid
 - **Verbosity.** Sharp, short sentences over wordy or convoluted ones. Cut filler. If a sentence can be split or shortened, do it.
 
