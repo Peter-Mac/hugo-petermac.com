@@ -72,9 +72,6 @@ static/pagefind
 
 bin/hugo
 
-# ignore python environment used for pagefind
-hugoenv/
-
 _z
 
 # Re possible config files

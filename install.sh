@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
-# Used for both Linux and MacOS installations
+# Bootstraps a fresh machine with the Hugo binary used by this site.
+# Supports macOS and Linux.
 
 set -euo pipefail
 
@@ -13,12 +13,10 @@ if [ $(id -u) -ne 0 ]; then
   exit 0
 fi
 
-# Assert that wget is installed
 hash wget 2>/dev/null || { echo "'wget' is not installed but is required by this script." >&2; exit 1; }
 
 HUGO_VERSION=0.134.2
 
-# The main installation function
 install_hugo( ) {
   VERSION="$1"
 
@@ -36,7 +34,7 @@ install_hugo( ) {
     exit 1
   fi
 
-  echo "Failed to detect Hugo v.${HUGO_VERSION} --- installing it..."
+  echo "Installing Hugo v${HUGO_VERSION}..."
 
   WORKING_DIRECTORY=$(pwd)
   TEMP_DIR=$(mktemp -d 2>/dev/null || mktemp -d -t 'mytmpdir')
@@ -63,34 +61,17 @@ install_hugo( ) {
   hugo version
 }
 
-echo "Checking for installation..."
+echo "Checking for Hugo installation..."
 if hash hugo 2>/dev/null; then
   if grep -q "hugo v${HUGO_VERSION}" <<< $(hugo env); then
-    echo "Detected Hugo v.${HUGO_VERSION}!"
-    echo "Nothing to do...continuing"
+    echo "Detected Hugo v${HUGO_VERSION}. Nothing to do."
   else
-    echo "Failed to detect Hugo v.${HUGO_VERSION} --- installing it..."
+    echo "Hugo present but not v${HUGO_VERSION}. Installing target version..."
     install_hugo $HUGO_VERSION
   fi
 else
-  echo "Hugo not installed..."
+  echo "Hugo not installed."
   install_hugo $HUGO_VERSION
 fi
 
-### ----------------------------------------------------------
-### Python environment + Pagefind install (no sudo required)
-### ----------------------------------------------------------
-
-echo "Running Python setup as non-root user..."
-
-if [ -f ./python_setup.sh ]; then
-  if [ "$SUDO_USER" ]; then
-    sudo -u "$SUDO_USER" ./python_setup.sh
-  else
-    ./python_setup.sh
-  fi
-else
-  echo "⚠️  Warning: python_setup.sh not found. Skipping Python setup."
-fi
-
-echo "✅ Install complete. You can now run: ./start.sh"
+echo "Install complete. Next: run 'npm install' in the project to pull Wrangler, then './start.sh'."
