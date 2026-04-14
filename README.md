@@ -48,11 +48,23 @@ Prerequisites for running `./cloudflare_deploy.sh`:
 
 5. To view in local preview (before committing anything) run `./start.sh`. This executes a local preview server on port 3000 (bound to your LAN IP so you can view it from other devices on the network).
 
-6. Once happy with the content, commit everything to git with a simple git commit and git push.
+6. Once happy with the content, commit and push to GitHub. The push to `main` triggers a Cloudflare Pages build — the site updates automatically within a minute or two.
 
-7. Finally run the cloudflare_deploy script (which uses the wrangler command) to push the latest updates to the live site.
+7. Verify the deploy by visiting the live site. If you want a quick sanity check on *when* the site was last built and *which* Hugo version produced it, every page carries a `build-info` meta tag:
+
+   ```bash
+   curl -s https://www.petermac.com | grep build-info
+   ```
+
+   The timestamp is UTC. A fresh timestamp and the expected Hugo version = you're good.
+
+## Escape hatch — CLI deploy
+
+If the GitHub auto-deploy is broken, or you need to publish without committing, run:
 
 ```bash
 ./cloudflare_deploy.sh
 ```
+
+This rebuilds locally and uploads the result directly to Cloudflare Pages via Wrangler. Used to be the primary path; now it's the backup.
 

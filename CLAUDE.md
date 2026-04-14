@@ -3,7 +3,7 @@
 This file gives Claude Code project-specific guidance for working in this repo.
 
 ## Project overview
-This repository contains the static files that support the petermac.com website — my professional persona presented to the world. The site uses the Hugo static site generator to render content. When changes are pushed to git, a git worker notifies Cloudflare's Wrangler process that content has been updated, which triggers a re-indexing of the site.
+This repository contains the static files that support the petermac.com website — my professional persona presented to the world. Hugo renders the content into a static site. Every push to `main` triggers a Cloudflare Pages build that rebuilds and publishes the site automatically. A CLI deploy path (`./cloudflare_deploy.sh`) is available as an escape hatch.
 
 ## Voice & audience
 Peter Mac (me) should come across as **approachable and non-corporate**, with a preference for simple wording and plain phrases. Strip out corporate BS from any output.
@@ -18,7 +18,7 @@ When drafting or editing content, default to that voice. Avoid jargon, hype, and
 - **Site generator:** Hugo (installed via Homebrew on Mac; see README for other platforms). Currently running 0.160.1.
 - **Node / npm:** used only for Wrangler (Cloudflare deploy tool) as a devDep, and for invoking Pagefind via `npx`. `npm install` pulls Wrangler and its transitive deps only.
 - **Content indexing:** Pagefind, invoked via `npx pagefind@latest` at build time. No local install required — npx downloads to the per-user npm cache.
-- **Hosting & deploy:** GitHub hosts the repo. A GitHub hook triggers a Cloudflare worker on every content push, which rebuilds the live site.
+- **Hosting & deploy:** GitHub hosts the repo. Every push to `main` triggers Cloudflare Pages to rebuild and deploy. CF's build environment is pinned via a `HUGO_VERSION` env var (currently `0.160.1` — **must match local Hugo** or builds fail on template deprecations) and runs `./build.sh` as the build command, outputting to `public/`. If you upgrade Hugo locally, update the `HUGO_VERSION` env var on the CF Pages project the same day.
 - **Theme:** custom theme at `themes/petermac-theme/` (kept in-repo, not vendored).
 - **Platform:** macOS is Peter's working environment. Scripts are cross-platform-aware (`get_ip.sh` branches for Darwin and Linux); Linux paths are untested in practice.
 
@@ -26,7 +26,7 @@ When drafting or editing content, default to that voice. Avoid jargon, hype, and
 - `build.sh` — cleans `public/` + Pagefind index dirs, runs Hugo, builds the Pagefind index via `npx`.
 - `start.sh` — ensures `local_ip.txt` exists (via `get_ip.sh`), then runs `hugo server` on port 3000 bound to `0.0.0.0` with the LAN IP as `baseURL` (so preview is reachable from other devices on the network).
 - `testbuild.sh` — runs `build.sh` then `start.sh` for a full clean rebuild + live preview.
-- `cloudflare_deploy.sh` — rebuilds via `build.sh` first (so production URLs are guaranteed in the output), then `npx wrangler pages deploy` for the `hugo-petermac-com` Cloudflare Pages project. See README for first-time setup.
+- `cloudflare_deploy.sh` — **escape hatch** for CLI direct-upload to Cloudflare Pages. Rebuilds via `build.sh` first (so production URLs are guaranteed in the output), then `npx wrangler pages deploy public`. Normal deploys happen automatically via `git push` → CF GitHub build. Use the CLI path only if the GitHub pipeline is broken, or you need to publish without committing (rare). See README for first-time setup.
 - `get_ip.sh` — writes the active LAN IP to `local_ip.txt`. Branches for macOS (`ipconfig getifaddr`) and Linux (`ip route get` with `hostname -I` fallback).
 
 ## Repo layout
@@ -34,7 +34,7 @@ When drafting or editing content, default to that voice. Avoid jargon, hype, and
 - `content/` — site content, a mix of fixed pages and blog posts:
   - **Fixed pages** (one folder each): `consulting/`, `services/`, `about/`, `contact/`, `cv/`. Plus `search/` for the Pagefind UI and `_index.md` for the home page.
   - **Blog** lives under `content/posts/` as an expanding archive. Articles use a date-based path: `posts/<year>/<month>/<article-title>/`. Each article folder contains an `index.md` for the body, with any associated images/assets stored alongside it in the same folder.
-- `themes/peter-mac-theme/` — custom theme; **all layouts and partials live here**, not in a top-level `layouts/`.
+- `themes/petermac-theme/` — custom theme; **all layouts and partials live here**, not in a top-level `layouts/`.
 - `static/` — static assets copied as-is into the build.
 - `public/` — Hugo build output.
 - `resources/` — Hugo's processed asset cache.
@@ -45,13 +45,22 @@ Day-to-day work runs through the bash scripts listed under [Tech stack → Local
 
 ## Authoring conventions
 
-### Sign-off before commit
+### Sign-off before commit (and before push)
 All new or edited content must be **reviewed locally before being pushed to production**. The workflow is:
 1. Run `./start.sh` to serve the site locally on `http://<local-ip>:3000` (or `./testbuild.sh` if a clean rebuild + Pagefind index is wanted first).
 2. Preview in the browser and verify layout, formatting, images, and copy.
 3. **Wait for explicit sign-off from Peter** before staging, committing, or pushing.
 
-Do not commit content on Peter's behalf without that explicit review step. The Cloudflare deploy is triggered by the push, so an unreviewed commit is an unreviewed publish.
+Do not commit or push content on Peter's behalf without that explicit review step. `git push` triggers a Cloudflare Pages auto-build and deploy — an unreviewed push is an unreviewed publish. A separate sign-off may be needed before pushing even if the commit is already signed off, depending on what's changed since.
+
+### Verifying a deploy
+After a push, Peter verifies deploys manually — he visits the site. A supporting signal is the `build-info` meta tag in every page's `<head>`:
+
+```bash
+curl -s https://www.petermac.com | grep build-info
+```
+
+Expected output: a meta tag with a recent UTC timestamp and the correct Hugo version (e.g. `2026-04-14T03:40:34Z | hugo 0.160.1`). A stale timestamp means the deploy didn't update. Don't propose automated verification scripts — Peter prefers eyes-on-glass for anything public-facing.
 
 ### Front matter / publish dates
 - Default publish date is the current date.
