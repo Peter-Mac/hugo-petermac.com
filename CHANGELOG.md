@@ -16,6 +16,7 @@ First substantial collaborative session with Claude Code. Baseline tidy-up acros
 - `CLAUDE.md` — project context for future Claude Code sessions (voice, tech stack, layout, authoring conventions, sign-off workflow).
 - `README.md` — "Installing Hugo" section pointing at Homebrew / Hugo's official install docs, plus a "First-time Cloudflare deploy setup" block.
 - Cross-platform branching in `get_ip.sh` (macOS + Linux).
+- `build-info` meta tag in `baseof.html` — injects build timestamp and Hugo version into every page's `<head>`. Deploy verification is now a one-liner: `curl -s https://www.petermac.com | grep build-info`.
 
 ### Changed
 - Standardised on `npx pagefind@latest` for search indexing. Python fallback dropped.
