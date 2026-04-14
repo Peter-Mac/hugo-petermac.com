@@ -26,7 +26,7 @@ When drafting or editing content, default to that voice. Avoid jargon, hype, and
 - `build.sh` — cleans `public/` + Pagefind index dirs, runs Hugo, builds the Pagefind index via `npx`.
 - `start.sh` — ensures `local_ip.txt` exists (via `get_ip.sh`), then runs `hugo server` on port 3000 bound to `0.0.0.0` with the LAN IP as `baseURL` (so preview is reachable from other devices on the network).
 - `testbuild.sh` — runs `build.sh` then `start.sh` for a full clean rebuild + live preview.
-- `cloudflare_deploy.sh` — one-line `npx wrangler pages deploy` for the `hugo-petermac-com` Cloudflare Pages project. See README for first-time setup.
+- `cloudflare_deploy.sh` — rebuilds via `build.sh` first (so production URLs are guaranteed in the output), then `npx wrangler pages deploy` for the `hugo-petermac-com` Cloudflare Pages project. See README for first-time setup.
 - `get_ip.sh` — writes the active LAN IP to `local_ip.txt`. Branches for macOS (`ipconfig getifaddr`) and Linux (`ip route get` with `hostname -I` fallback).
 
 ## Repo layout

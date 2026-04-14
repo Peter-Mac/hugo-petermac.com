@@ -32,6 +32,7 @@ First substantial collaborative session with Claude Code. Baseline tidy-up acros
 ### Fixed
 - Hugo 0.158+ compatibility — `.Site.Author` → `.Site.Params.Author`, `languageCode` → `locale`, `outputs.yaml` unwrapped.
 - Silenced `.Site.LanguageCode` deprecation warnings across four template usages (replaced with `.Site.Language.Locale`).
+- `cloudflare_deploy.sh` now rebuilds via `build.sh` before uploading, so stale dev-URL content left in `public/` by a local preview can't accidentally ship to production. Fail-fast via `set -e`.
 
 ### Security
 - Cleared the dependabot noise caused by misplaced transitive deps. 3 moderate vulns remain inside Wrangler's transitive tree (esbuild, undici) — parked pending Wrangler v4 upgrade.
