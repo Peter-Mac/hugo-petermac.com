@@ -13,10 +13,10 @@ image: contact/fax-machine.webp
 
 # Contact Me
 
-To get in touch with me please send an email to...
+The easiest way to reach me is by email. I usually reply within a day or two — and if you're exploring whether working together might make sense, the first conversation is always no-obligation.
 
 **Email:** peter at petermac dot com
 
-**LinkedIn:** <a href="https://www.linkedin.com/in/peter-mac-44135121/" target="_blank" title="linkedIn" >https://www.linkedin.com/in/peter-mac-44135121/</a>
+**LinkedIn:** [linkedin.com/in/peter-mac-44135121](https://www.linkedin.com/in/peter-mac-44135121/)
 
-**Github:** <a href="https://github.com/Peter-Mac" target="_blank" title="Github">https://github.com/Peter-Mac</a>
+**GitHub:** [github.com/Peter-Mac](https://github.com/Peter-Mac)
