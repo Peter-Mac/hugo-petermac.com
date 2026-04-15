@@ -15,24 +15,21 @@ showprofile: true
 
 I'm Peter, welcome to my humble little site.
 
-I'm based in Melbourne Australia (originally from Ireland) and work as a consulting Technology Architect for a broad range of organisations.
+I'm based in Melbourne, Australia — originally from Ireland — and I work as a consulting technology architect across a wide range of organisations.
 
-I'm also a technology tinkerer which means I've generally got a few projects on the go trying out new things to see how they work.
+I'm a technology tinkerer on the side — usually a few projects on the go, trying new things to see how they work.
 
 My interests include:
+
 - Web technologies (mainly backend focus)
-- Home Automation (Using Home Assistant)
-- Photography (Nikon, Fujifilm, Street, Landscape, People)
-- Motorcycling (Adventure riding, off roading, Royal Enfield Himalayan, BMW GS 650)
+- Home Automation (using Home Assistant)
+- Photography (Nikon, Fujifilm — street, landscape, people)
+- Motorcycling (adventure riding, off-roading — Royal Enfield Himalayan, Triumph Scrambler 900)
 - Cycling (Giant Trek (~2003) and Cervelo S3 (~2014))
 
-This is what ChatGPT says about me...
+Professionally, it's 30-odd years now — from Dublin in the early days, through a range of industries in Australia, designing technology platforms and steering cloud transitions. More recently I've been working with generative AI, where the interesting work sits in the gap between what the tech can actually do and what everyone expects of it.
 
-"As a seasoned consulting Technology Architect, Peter's skills are targeted at helping businesses transform their IT landscape through strategic planning and innovative solutions. His expertise lies in understanding current technologies and providing advice on cost effective recommendations to help prepare your business for the future."
-
-Note: ChatGPT never hallucinates :)
-
-I've spent the last 30 or so years working in corporate land designing and implementing large scale technology platforms and transitions to cloud hosted environments.  More recently, I've been working with Generative AI and all the unknowns and heightened expectations in that domain.
+If you're thinking about working together, the [Consulting](/consulting/) page lays out how I help — or just [drop me a line](/contact/) and we can talk.
 
 
 
