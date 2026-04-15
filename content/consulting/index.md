@@ -10,26 +10,35 @@ draft: false
 image: consulting/consulting.webp
 ---
 
-### Helping Empower Your Technology Vision
+### What I do
 
-In the rapidly evolving tech landscape, strategic decisions can be the difference between success and stagnation. As an experienced technology consultant, I help in guiding businesses through complex technology decisions, ensuring they not only keep up with the trends but lead the way.
+I'm a solution architect with 30 years in IT, most of it as a contractor across a wide range of industries. Since the early 2000s my focus has been customer-facing digital systems — if it moves on the web, I've generally had a hand in it. That experience brings pragmatic, cost-aware judgement: I've seen which approaches hold up over time and which don't.
 
-### My Approach
+### Who I help
 
-**Strategic Vision:** I don’t just adapt to technology trends – I help anticipate them. My forward-thinking approach means your business is always prepared for the future, not just responding to the present.
+I work best with small-to-medium businesses where the CIO (and sometimes the CFO) is caught in day-to-day firefighting and needs a strategic pair of hands to lift their head above it. The most productive engagements are in low-bureaucracy environments, with a direct line between me and the decision-maker — no committees between idea and action.
 
-**Custom Solutions:** Every business is unique, and off-the-shelf solutions rarely offer the best value. I can help with design of tailored solutions that align with your specific business objectives, optimising efficiency and cost-effectiveness.
+Most commercial sectors are fine; I stay out of gambling and government.
 
-**Risk Management:** Technology investments can be significant, and not all are worthwhile. I help you navigate these waters safely, ensuring that every technology investment is a stepping stone towards greater success with awareness of underlying risks and approaches to mitigation.
+### How I work
 
-### Benefits of Working With a Technology Architect
+My preference is **a couple of days a week** with fixed-scope deliverables — clear objectives and a clear signal that a piece of work is done. The Australian market tends to wrap engagements in six-month contracts with a mix of on-site and remote, and I'll work inside that shape where it makes sense. Full-time roles aren't usually the fit, but I won't rule out the right offer.
 
-**Expert Guidance:** With years of industry experience, technology architects bring a wealth of knowledge to every project. From emerging tech to IT infrastructure, get expert insights that align with your business goals.
+### What I deliver
 
-**Enhanced Efficiency:** Eliminate guesswork and streamline operations with architectures that are built to optimise your business processes. Increase productivity and reduce costs with solutions that fit.
+Depending on where your organisation sits, I can help with:
 
-**Competitive Edge:** Stay ahead of the competition with cutting-edge solutions that are implemented with strategic intent. Outpace competitors with innovations that are aligned with your business strategy.
+- **Architecture practice setup** — if you don't yet have one, or it needs reshaping. Includes governance guides and a roadmap to make the practice sustainable.
+- **Current-state analysis** — an honest read on where your technology and capabilities stand, and where the gaps are.
+- **Technology roadmaps** — a sequence of decisions and investments to move from where you are to where you need to be.
+- **Platform selection** — supporting the CIO through vendor evaluations, technical due diligence, and the decision trail behind the choice.
+- **Governance and decision evidence** — the checkpoints and documentation that let the executive team approve with confidence.
+- **Implementation oversight** — staying with the delivery teams through the build, so the design survives contact with reality.
 
-**Scalable Solutions:** As your business grows, your technology needs will evolve. A technology architect can advise on appropriate use of scalable technology frameworks that grow with your business, ensuring you can expand effortlessly and cost-effectively.
+### What this isn't
 
-**Future-Proofing:** Technology evolves rapidly. We help you make decisions that not only meet today’s needs but also anticipate future trends, ensuring longevity and adaptability of your tech investments.
+No strategic vision decks, no future-proofing slideware. The output is practical assets your team can use on Monday morning — documents, decisions, roadmaps, evidence — backed by 30 years of watching which ideas hold up and which ones don't.
+
+### Get in touch
+
+If this sounds like the help you're looking for, [drop me an email](/contact/).
