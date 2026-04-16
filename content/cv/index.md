@@ -19,8 +19,6 @@ I'm a solution architect with 30 years in IT, working across a wide range of ind
 
 I enjoy the architect's role because it sits where business intent meets technical reality. The interesting work is in the trade-offs — balancing cost, risk, and timeline against what the technology can actually do. I keep an eye on emerging tech because it sometimes changes those trade-offs, not because newer is automatically better.
 
-Alongside the delivery work I spend time mentoring less experienced architects and engineers. Passing on what I've learned — including the mistakes — is one of the more rewarding parts of the job.
-
 ### Key Skills and Competencies
 
 **Architecture and solution design.** End-to-end design across a wide spectrum of industries and technology stacks. Comfortable with the full scope — picking the right components and vendors, integration design, and guiding the delivery teams that build it.
@@ -39,13 +37,17 @@ Alongside the delivery work I spend time mentoring less experienced architects a
 
 2010 – Advised on introduction of Salesforce into AXA to help enhance agent engagement and streamline contact touch-points.
 
-2020 – AWS Architecture certification achieved.
+2020 – AWS Architecture certification.
 
-2024 - Implemented Generative AI chat/voice bot solutions for Australia Post
+2024 – Implemented Generative AI chat/voice bot solutions for Australia Post.
 
 ### Employment History
 
-**Dulux Group – Digital Archictect – December 2024 – Present**
+**Davidson RC Technology – Solution Architect (Contract) – November 2025 – Present**
+
+Working in a fixed engagement capacity to deliver an assessment of Finance/HR/Service Management platforms to improve integrations for a complex construction client's needs.
+
+**Dulux Group – Digital Architect – December 2024 – November 2025**
 
 Working with the digital and marketing platform teams on loyalty and broader digital initiatives for the Dulux Group. The work cuts across marketing, finance, loyalty and product, which makes the architectural choices more interesting — each area brings its own constraints.
 
@@ -115,13 +117,13 @@ Projects included:
     - Redesign of housing records system with emphasis on integration with wider DHS systems.
 
 - Salesfest/Askmenow.net.au
-    - End to end design, build and support of SMS integrated website for the motor industry.
+    - End-to-end design, build and support of SMS integrated website for the motor industry.
 
 - Aperio Group
     - SQL Server Data warehouse implementation to support manufacturing organisation with 14 sites and 3 ERP systems.
 
 - Telstra/Avanade
-    - Work on the Telstra transformation project to design a call-center solution integrating multiple desktop and terminal emulation systems.
+    - Work on the Telstra transformation project to design a call-centre solution integrating multiple desktop and terminal emulation systems.
 
 - PMP Printing Group
     - Advise on integration of a new ERP system and existing accounts systems. Development of an SOA framework to enable the integration.
@@ -141,7 +143,7 @@ Designed high-performance interfaces between McMillan Shakespeare's homegrown we
 
 Method was Telstra's primary Intranet system software supplier, built entirely in-house. I designed and built additional components to integrate with the Telstra environment, managing development, delivery, and implementation through to UAT sign-off.
 
-**Australia New Zealand Bank (ANZ) Team Lead/Architect – May 1999 – Feb – 2002**
+**Australia New Zealand Bank (ANZ) – Team Lead/Architect – May 1999 – Feb 2002**
 
 Team lead in the eCommerce division, streamlining online applications — work that grew into a broader project integrating legacy systems (credit checking, account opening, workflow). The role evolved into cross-divisional liaison, and an opportunity to present a unified systems approach to senior management.
 
@@ -151,23 +153,21 @@ Before moving to Australia, I spent my early career in Dublin — starting at Fi
 
 ### Education
 
-- 1993 – 1994 Senior College Dun Laoghaire, County Dublin
+- 2025 – Microsoft Azure Architect (AZ-305)
 
-- Diploma in Data Processing and Information Systems
+- 2025 – Microsoft Azure Administrator (AZ-104)
 
-- Information Technology Instructor Certificate
+- 2020 – AWS Architecture Certification (Associate Architect)
 
-- 1994 – 1996 Dublin Institute of Technology
-    Certificate in Commercial Computer Programming
+- 2011 – TOGAF 9 Certification
 
 - 1996 – 1998 Dublin Institute of Technology
     British Computer Society Exams (Honours Degree Level)
 
-- 2011 – TOGAF 9 Certification
+- 1994 – 1996 Dublin Institute of Technology
+    Certificate in Commercial Computer Programming
 
-- 2020 – AWS Architecture Certification (Associate Architect)
-
-- 2025 – Microsoft Azure Administrator (AZ-104)
-
-- 2025 – Microsoft Azure Architect (AZ-305)
+- 1993 – 1994 Senior College Dun Laoghaire, County Dublin
+    - Diploma in Data Processing and Information Systems
+    - Information Technology Instructor Certificate
 
